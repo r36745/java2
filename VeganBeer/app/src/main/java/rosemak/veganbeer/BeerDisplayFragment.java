@@ -7,9 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-/**
- * Created by stevierose on 10/30/14.
- */
+//Steven Roseman
+//Java2
+
 public class BeerDisplayFragment extends Fragment {
     public static final String TAG = "DISPLAYFRAGMENT.TAG";
     public static final String ARG_TEXT_BEER = "DISPLAYFRAGMENT.ARG_TEXT_BEER";

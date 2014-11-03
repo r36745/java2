@@ -3,6 +3,9 @@ package rosemak.veganbeer;
 import android.app.Activity;
 import android.os.Bundle;
 
+//Steven Roseman
+//Java2
+
 
 public class BeverageDepot extends Activity implements BeerListFragment.OnListClickListener {
     public static final String TAG = "Beverage Depot";

@@ -26,9 +26,9 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-/**
- * Created by stevierose on 10/30/14.
- */
+//Steven Roseman
+//Java2
+
 public class BeerListFragment extends ListFragment {
     public static final String TAG = "BEERLISTFRAGMENT.TAG";
     protected  JSONObject beerData = null;
