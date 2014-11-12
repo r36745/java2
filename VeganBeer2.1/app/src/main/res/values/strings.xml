@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Steves Ales</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="presidents">
+        <item>George Wash</item>
+        <item>George Till</item>
+        <item>Ben Wash</item>
+        <item>Up tight</item>
+        <item>Fresh Mouth</item>
+    </string-array>
+
+
+</resources>
