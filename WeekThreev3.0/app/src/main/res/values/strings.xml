@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Week Three v3.0</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="newshow_button">Add Show</string>
+    <string name="savedShows_button">Saved Shows</string>
+    <string name="header_newShow">New Show</string>
+    <string name="showName_default">Show Name: </string>
+    <string name="showDate_default">Show Date: </string>
+    <string name="hint_date">ex. 3/15/14</string>
+    <string name="hint_showName">ex. Husbands of Hollywood</string>
+    <string name="showTime_default">ShowTime: </string>
+    <string name="hint_time">9:00pm</string>
+    <string name="listView_addItemButton">+</string>
+
+</resources>

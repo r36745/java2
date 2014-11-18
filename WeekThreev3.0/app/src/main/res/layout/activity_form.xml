@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="90dp"
+        android:layout_marginStart="90dp"
+        android:text="@string/header_newShow"
+        android:id="@+id/textHeader"
+        android:textSize="40sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/default_showName"
+        android:layout_below="@+id/textHeader"
+        android:layout_marginTop="20dp"
+        android:text="@string/showName_default"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textHeader"
+        android:layout_toRightOf="@id/default_showName"
+        android:layout_marginTop="20dp"
+        android:hint="@string/hint_showName"
+        android:id="@+id/showNameEditText"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/default_showName"
+        android:layout_marginTop="40dp"
+        android:id="@+id/default_showDate"
+        android:text="@string/showDate_default"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/default_showDate"
+        android:layout_marginTop="20dp"
+        android:inputType="date"
+        android:hint="@string/hint_date"
+        android:id="@+id/showDateEditText"
+        android:layout_below="@id/showNameEditText"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/default_showDate"
+        android:layout_marginTop="40dp"
+        android:id="@+id/default_showTime"
+        android:text="@string/showTime_default"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/default_showTime"
+        android:layout_marginTop="20dp"
+        android:inputType="datetime"
+        android:layout_below="@+id/showDateEditText"
+        android:id="@+id/showTimeEditText"
+        android:hint="@string/hint_time"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_below="@+id/showTimeEditText"
+        android:layout_centerInParent="true"
+        android:id="@+id/saveItemsButton"
+        android:layout_marginTop="120dp"/>
+</RelativeLayout>
