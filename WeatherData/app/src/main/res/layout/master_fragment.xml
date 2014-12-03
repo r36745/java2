@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weatherTextView"
+        android:text="@string/city_textview"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/weatherEditText"
+        android:layout_toRightOf="@+id/weatherTextView"
+        android:layout_toEndOf="@+id/weatherTextView"
+        android:hint="@string/hint_editText"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/weatherTextView"
+        android:text="@string/search_button"
+        android:id="@+id/searchButton"/>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weatherListView"
+        android:layout_below="@+id/searchButton"
+        android:layout_marginTop="10dp"></ListView>
+
+</RelativeLayout>

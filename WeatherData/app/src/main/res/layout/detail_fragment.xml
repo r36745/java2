@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/tableLayout">
+        <TableRow android:padding="10dp">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/detailWeatherDescriptionLabel"
+                android:text="@string/description_textview"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:id="@+id/weatherDescription"/>
+        </TableRow>
+
+        <TableRow android:padding="10dp">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/detailWeatherTypeLabel"
+                android:text="@string/weatherType_textview"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:id="@+id/weatherType"/>
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
