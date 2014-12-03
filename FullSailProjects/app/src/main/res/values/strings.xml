@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Weather Info</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="city_textview">City:</string>
+    <string name="hint_editText">ex. Charlotte,us</string>
+    <string name="search_button">Search</string>
+    <string name="description_textview">Description</string>
+    <string name="descriptiontype_textview">Type:</string>
+
+</resources>
