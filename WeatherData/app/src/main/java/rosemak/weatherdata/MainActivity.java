@@ -3,7 +3,6 @@ package rosemak.weatherdata;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Toast;
 
 
 public class MainActivity extends Activity implements MainFragment.OnButtonClickListener {
@@ -24,7 +23,11 @@ public class MainActivity extends Activity implements MainFragment.OnButtonClick
     @Override
     public void cityClass(City cityClass) {
 
-        Toast.makeText(this, cityClass.getWeather_name(), Toast.LENGTH_LONG).show();
-        Log.i(TAG, "Name= " + cityClass.getWeather_name());
+        DetailFragment detailFragment = DetailFragment.newInstance(cityClass.getWeather_name(), cityClass.getWeatherType(), cityClass.getWeatherDescription());
+        getFragmentManager().beginTransaction()
+                .replace(R.id.container2, detailFragment, DetailFragment.TAG)
+                .commit();
+
+        Log.i(TAG, "The City Name= " + cityClass.getWeather_name() + "Weather Type= " + cityClass.getWeatherType());
     }
 }

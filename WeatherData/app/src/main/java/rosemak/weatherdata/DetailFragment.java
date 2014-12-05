@@ -60,13 +60,14 @@ public class DetailFragment extends Fragment{
         super.onActivityCreated(savedInstanceState);
 
 
-        TextView cityName = (TextView) getView().findViewById(R.id.cityNameTextView);
+        TextView cityName = (TextView) getActivity().findViewById(R.id.cityNameWeather);
         cityName.setText(mCityName);
 
-        TextView weatherType = (TextView) getView().findViewById(R.id.weatherType);
+        TextView weatherType = (TextView) getActivity().findViewById(R.id.weatherType);
         weatherType.setText(mWeatherType);
 
-        TextView weatherDescription = (TextView) getView().findViewById(R.id.weatherDescription);
+        TextView weatherDescription = (TextView) getActivity().findViewById(R.id.weatherDescription);
         weatherDescription.setText(mWeatherDescription);
+
     }
 }
