@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerWeatherTextView"
+        android:text="@string/spinnerCity_textview"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/spinnerWeatherTextView"
+        android:layout_toEndOf="@+id/spinnerWeatherTextView"
+        android:id="@+id/spinnerEditText"
+        android:hint="@string/spinnerHint_editText"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinnerEditText"
+        android:layout_marginTop="10dp"
+        android:text="Search"
+        android:id="@+id/spinnerSearchButton"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weatherSpinner"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/spinnerSearchButton"></Spinner>
+
+
+</RelativeLayout>

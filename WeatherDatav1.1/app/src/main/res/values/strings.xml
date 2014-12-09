@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Weather Data v1.1</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="cityName_textview">City:</string>
+    <string name="hint_editText">ex. Charlotte</string>
+    <string name="search_button">Search</string>
+    <string name="city_textview">City Name:</string>
+    <string name="weatherType_textview">Type:</string>
+    <string name="description_textview">Description</string>
+    <string name="spinnerCity_textview">City</string>
+    <string name="spinnerHint_editText">ex. Charlotte</string>
+
+</resources>
