@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">List Application</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="header_textview">New Item</string>
+    <string name="default_ideaName">Idea:</string>
+    <string name="hint_ideaEditText">ex. New Idea</string>
+    <string name="default_description">Description:</string>
+    <string name="hint_description">ex. app of political facts</string>
+    <string name="default_priority">Priority:</string>
+    <string name="listFragment_formButton">Add Idea</string>
+
+</resources>
