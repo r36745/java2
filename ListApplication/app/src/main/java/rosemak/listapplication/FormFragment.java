@@ -49,15 +49,17 @@ public class FormFragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        final EditText name = (EditText) getActivity().findViewById(R.id.ideaEditText);
-        final EditText description = (EditText) getActivity().findViewById(R.id.descriptionEditText);
-        final EditText priority = (EditText) getActivity().findViewById(R.id.priorityEditText);
         Button saveButton = (Button) getActivity().findViewById(R.id.saveButton);
 
 
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                EditText name = (EditText) getActivity().findViewById(R.id.ideaEditText);
+                EditText description = (EditText) getActivity().findViewById(R.id.descriptionEditText);
+                EditText priority = (EditText) getActivity().findViewById(R.id.priorityEditText);
+
 
                 String ideaName = name.getText().toString();
                 Log.i(TAG, "Name= " + ideaName);

@@ -19,15 +19,17 @@ public class FormActivity extends Activity implements FormFragment.OnClickListen
         getFragmentManager().beginTransaction()
                 .replace(R.id.formContainer, formFragment, FormFragment.TAG)
                 .commit();
+
+
     }
 
     @Override
     public void newIdeas(Idea idea) {
 
 
-        ListFragment listFragment = ListFragment.newInstance(idea);
+        MainFragment listFragment = MainFragment.newInstance(idea);
         getFragmentManager().beginTransaction()
-                .replace(R.id.listFrame, listFragment, ListFragment.TAG)
+                .replace(R.id.listFrame, listFragment, MainFragment.TAG)
                 .commit();
         Log.i(TAG, "City Name= " + idea.getIdea_name());
     }
