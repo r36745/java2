@@ -27,7 +27,7 @@ public class FormActivity extends Activity implements FormFragment.OnClickListen
     public void newIdeas(Idea idea) {
 
 
-        MainFragment listFragment = MainFragment.newInstance(idea);
+        MainFragment listFragment = MainFragment.newInstance(idea.getIdea_name(), idea.getIdea_description(), idea.getIdea_priority());
         getFragmentManager().beginTransaction()
                 .replace(R.id.listFrame, listFragment, MainFragment.TAG)
                 .commit();

@@ -15,11 +15,15 @@ public class MainActivity extends Activity implements MainFragment.OnListClickLi
         MainFragment listFragment = new MainFragment();
         getFragmentManager().beginTransaction().replace(R.id.listFrame, listFragment, MainFragment.TAG)
                 .commit();
+
+
     }
 
 
     @Override
     public void listIdea(Idea idea) {
+
+
 
 
     }

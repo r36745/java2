@@ -15,6 +15,9 @@ import android.widget.EditText;
  */
 public class FormFragment extends Fragment {
 
+    public EditText name;
+    public EditText description;
+    public EditText priority;
     public static final String TAG = "FormFragment";
     private OnClickListener mListener;
     private Idea newIdea;
@@ -50,15 +53,16 @@ public class FormFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
 
         Button saveButton = (Button) getActivity().findViewById(R.id.saveButton);
+         name = (EditText) getActivity().findViewById(R.id.ideaEditText);
+        description = (EditText) getActivity().findViewById(R.id.descriptionEditText);
+        priority = (EditText) getActivity().findViewById(R.id.priorityEditText);
 
 
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                EditText name = (EditText) getActivity().findViewById(R.id.ideaEditText);
-                EditText description = (EditText) getActivity().findViewById(R.id.descriptionEditText);
-                EditText priority = (EditText) getActivity().findViewById(R.id.priorityEditText);
+
 
 
                 String ideaName = name.getText().toString();

@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -27,7 +28,7 @@ public class MainFragment extends Fragment  {
     public String mIdeaName;
     private String mDesrcription;
     private String mPriority;
-    //private ListView ideaListView;
+    public ListView ideaListView;
 
     public static final String ARG_IDEANAME = "ideaName";
     private static final String ARG_IDEADESCRIPTION = "ideaDescription";
@@ -38,20 +39,17 @@ public class MainFragment extends Fragment  {
         public void listIdea(Idea idea);
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.main_fragment, container, false);
-    }
 
-    public static MainFragment newInstance(Idea idea) {
+
+    public static MainFragment newInstance(String ideaName, String ideaDescription, String ideaPriority) {
         MainFragment listFragment = new MainFragment();
 
         Bundle args = new Bundle();
-        args.putSerializable(ARG_IDEANAME,idea.getIdea_name());
-        args.putSerializable(ARG_IDEADESCRIPTION,idea.getIdea_description());
-        args.putSerializable(ARG_IDEAPRIORITY,idea.getIdea_priority());
+        args.putSerializable(ARG_IDEANAME,ideaName);
+        args.putSerializable(ARG_IDEADESCRIPTION,ideaDescription);
+        args.putSerializable(ARG_IDEAPRIORITY,ideaPriority);
         listFragment.setArguments(args);
-        Log.i(TAG, "Name of something= " +idea.getIdea_name());
+        Log.i(TAG, "Name of something= " +ideaName);
 
         return listFragment;
     }
@@ -73,30 +71,14 @@ public class MainFragment extends Fragment  {
     }
 
     @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.main_fragment, container, false);
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        mIdeaArrayList = new ArrayList<>();
-        //mIdeaArrayList.add("");
-
-        if (getArguments()!= null) {
-            mIdeaName = (String) getArguments().getSerializable(ARG_IDEANAME);
-            Log.i(TAG, "Final Idea Name= " + mIdeaName);
-
-
-           mIdeaArrayList.add(mIdeaName);
-            Log.i(TAG, "ArrayList= " +mIdeaArrayList);
-
-           ListView ideaListView = (ListView)getActivity().findViewById(R.id.listViewForm);
-
-            ideaListAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, mIdeaArrayList);
-
-            ideaListView.setAdapter(ideaListAdapter);
-
-        }else {
-            Intent formIntent = new Intent(getActivity(), FormActivity.class);
-            startActivity(formIntent);
-        }
+        ideaListView = (ListView)getActivity().findViewById(R.id.mainListView);
 
 
     }
@@ -104,6 +86,44 @@ public class MainFragment extends Fragment  {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
+
+
+        mIdeaArrayList = new ArrayList<>();
+        // mIdeaArrayList.add("");
+
+
+
+        if (getArguments()!= null) {
+             mIdeaName = (String) getArguments().getSerializable(ARG_IDEANAME);
+            Log.i(TAG, "Final Idea Name= " + mIdeaName);
+            String text = "myTet";
+            mIdeaArrayList.add(text);
+
+
+
+            Log.i(TAG, "ArrayList= " +mIdeaArrayList);
+
+
+
+            // mIdeaArrayList.add(newIdea.getIdea_name(mIdeaName));
+            //IdeaAdapter ideaAdapter = new IdeaAdapter(getActivity(),mIdeaArrayList );
+
+            ideaListAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, mIdeaArrayList);
+            ideaListView.setAdapter(ideaListAdapter);
+
+            ideaListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                }
+            });
+
+
+        }else {
+            Intent formIntent = new Intent(getActivity(), FormActivity.class);
+            startActivity(formIntent);
+        }
 
 
 
