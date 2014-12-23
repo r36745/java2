@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/tableLayout">
+
+        <TableRow android:padding="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/detailWeatherName"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_weight="4"
+                android:id="@+id/ideaNameTextView"/>
+        </TableRow>
+
+        <TableRow android:padding="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/detailWeatherDescriptionLabel"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_weight="4"
+                android:id="@+id/ideaDescription"/>
+        </TableRow>
+
+        <TableRow android:padding="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+
+                android:id="@+id/detailWeatherTypeLabel"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_weight="4"
+                android:id="@+id/ideaPriority"/>
+        </TableRow>
+    </TableLayout>
+    
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:id="@+id/deleteButton"
+       />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Share"
+        android:id="@+id/shareButton"
+        android:onClick="shareButton"/>
+
+
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CaseStudy1</string>
+    <string name="football_team">League Teams</string>
+    <string name="football_team1">Little Rams</string>
+    <string name="football_team2">99ers</string>
+    <string name="football_team3">SouthSide Ravens</string>
+    <string name="football_team4">Little Bears</string>
+    <string name="football_team5">DC Bucs</string>
+    <string name="football_team6">Little Texans</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

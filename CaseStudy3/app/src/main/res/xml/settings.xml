@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Science-Fiction News">
+
+        <CheckBoxPreference
+
+            android:key="pref_wifi"
+            android:title="Enable Wifi"
+            android:id="@+id/checkbox1"
+            />
+
+
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
